@@ -1,0 +1,41 @@
+body{
+    font-size: 30px;
+}
+table { 
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    
+}
+.cell{
+    border: 1px solid black;
+    background-color: grey;
+    width: 10px;
+    border: 1px solid black;
+    height: 8px;
+    padding: 5px;
+
+}
+#buttons_container{
+    height: 10vh;
+    padding-top: 5px;
+}
+
+.btn {
+    background-color: blue; 
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 5px 3px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .container {
+    margin: 0 auto;
+    width: 45%;
+}
