@@ -28,7 +28,45 @@ console.log(typeof(c))
  
 createWorld();
 
+const tbl = document.createElement("table");
+// let started = false; // Set to true when use clicks start
+// let timer;
+// let evolutionSpeed = 1000; // One second between generations
 
+let currGen = [rows];
+let nextGen = [rows];
+
+function createGenArrays() {
+  for (let i = 0; i < rows; i++) {
+    currGen[i] = new Array(cols);
+    nextGen[i] = new Array(cols);
+  }
+}
+
+function initGenArrays() {
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      currGen[i][j] = 0;
+      nextGen[i][j] = 0;
+    }
+  }
+}
+
+function random() {
+  let row = Number(location[0]);
+  let col = Number(location[1]);
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      currGen[i][j] = Math.floor(Math.random() * 2);
+
+      if (currGen[i][j] == 1) {
+        tbl.children[i].children[j].setAttribute("class", "alive");
+      } else {
+        tbl.children[i].children[j].setAttribute("class", "dead");
+      }
+    }
+  }
+}
 
 
 
